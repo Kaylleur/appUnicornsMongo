@@ -20,6 +20,7 @@ module.exports = {
         unicornModel.add(unicorn, function(err, unicorn) {
             if (err) {
                 res.send({ err: err});
+                return;
             }
             res.json(unicorn);
         });
@@ -29,6 +30,7 @@ module.exports = {
         unicornModel.edit(req.params.id,unicorn, function(err, unicorn) {
             if (err) {
                 res.send({ err: err});
+                return;
             }
             res.json(unicorn);
         });
@@ -37,6 +39,7 @@ module.exports = {
         unicornModel.remove(req.params.id, function(err, unicorn) {
             if (err) {
                 res.send({ err: err});
+                return;
             }
             res.json(unicorn);
         });
