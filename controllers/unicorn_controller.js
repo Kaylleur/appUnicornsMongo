@@ -3,7 +3,7 @@ var unicornModel = require('../models/unicorns');
 module.exports = {
     all: function(req, res) {
         unicornModel.all(function(unicorns, err) {
-            res.send(unicorns||err);
+            res.json(unicorns||err);
         });
     },
     get: function(req, res) {
@@ -12,7 +12,7 @@ module.exports = {
             if (err) {
                 res.send({ err: err});
             }
-            res.send(unicorn);
+            res.json(unicorn);
         });
     },
     add: function(req, res) {
@@ -21,7 +21,7 @@ module.exports = {
             if (err) {
                 res.send({ err: err});
             }
-            res.send(unicorn);
+            res.json(unicorn);
         });
     },
     edit: function(req, res) {
@@ -30,7 +30,7 @@ module.exports = {
             if (err) {
                 res.send({ err: err});
             }
-            res.send(unicorn);
+            res.json(unicorn);
         });
     },
     remove: function(req,res){
@@ -38,7 +38,7 @@ module.exports = {
             if (err) {
                 res.send({ err: err});
             }
-            res.send(unicorn);
+            res.json(unicorn);
         });
     }
 };
